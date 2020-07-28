@@ -10,72 +10,32 @@
 </head>
 <body>
     
-    
-    <div id="startpage" class="container">
-        <div class="row">
-            <div class="col"></div>
-            <div class="col-md-auto">
-                <p>This is a multiple choice quiz testing your knowledge on JavaScript fundamentals</p>
-            </div>
-            <div class="col"></div>
-        </div>
-        <div class="row">
-            <div class="col"></div>
-            <div class="col-md-auto">
-                <button id="start">Click here to start quiz!</button>
-                <button id="startHighscorepage" onclick="highScore ()">High Scores</button>
-            </div>
-            <div class="col"></div>
-        </div>
-    </div>
 
-    <div id="questions" class="container">
-        <div id="timer">Time Left: </div>
+    <div id="quizGame" class="jumbotron">
+        <h1 class="display-4 text-center m-5">Code Quiz!</h1>
+        <p id="questionPrompt" class="lead text-center">This is a multiple choice quiz testing your knowledge on JavaScript fundamentals. You will have 90 seconds to complete this quiz. Be careful, there might be a consequence for incorrect answers!</p>
+        <ul id ="questionList">
+            <p>Score: <span id="score">0</span></p>
+            <p>Time Left: <span id="time">90</span></p>
+            <li>
+                <button  id="A" type="button" class="A btn btn-light questionList">A</button>
+            </li>
+            <li>
+                <button id="B" type="button" class="B btn btn-light questionList">B</button>
+            </li>
+            <li>
+                <button id="C" type="button" class="C btn btn-light questionList">C</button>
+            </li>
+            <li>
+                <button id="D" type="button" class="D btn btn-light questionList">D</button>
+            </li>
+        </ul>
+
+        <div id="result"></div>
         
+        <a id="start" class="startBtn btn btn-primary btn-lg" role="button">Start</a>
+        <!-- <a id="startHighscorepage" class="startBtn btn btn-primary btn-lg" role="button">Check HighScores</a> -->
     </div>
-    
-    
-    
-    
-    
-    
-    <!-- <div class="container">
-        <div class="row">
-            <div class="col">
-                <div class="float-left" id="highscore" onClick="showHighscore()">View Highscores</div>
-            </div>
-            <div class="col">
-                <div class="float-right" id="timer">Time left: 60</div>
-            </div>
-        </div>
-    </div> -->
-
-
-    <!-- <main class="container">
-        <div class="row">
-            <div class="col"></div>
-            <div class="col-md-auto">
-                <button id="start">Click here to start quiz!</button>
-            </div>
-            <div class="col"></div>
-        </div>
-    </main>
-
-    <div id="quiz" style = "display:none;">
-        <div id="question">
-            <p>
-                Question
-            </p>
-        </div>
-    </div>
-
-    <div id="scoreContainer" style="display:none;"></div> -->
-
-
-
-
-    <!-- set grids top right and top left one with ability to check scores and the other with the timer -->
-    <!-- in the middle we are going to have the questions  -->
 
 
 
