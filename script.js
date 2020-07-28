@@ -123,7 +123,6 @@ function checkAnswer() {
         setTimeout(nextQuestion, 2000);
     }
     i++
-
 }
 
 function checkEnd() {
@@ -132,7 +131,6 @@ function checkEnd() {
     } else {
         return true
     }
-
 }
 
 const endGame = () => {
@@ -154,14 +152,9 @@ const endGame = () => {
 }
 
 const submitScore = submission => {
-    console.log(submission)
-
     let leaderboard = JSON.parse(localStorage.getItem('leaderboard')) || []
-
     leaderboard.push(submission)
-
     localStorage.setItem('leaderboard', JSON.stringify(leaderboard))
-
     leaderboard.sort((a, b) => {
         return b.score - a.score
     })
@@ -189,19 +182,15 @@ const submitScore = submission => {
         `
         bodyElem.append(rowElem)
     }
-
     tableElem.append(bodyElem)
-
     document.getElementById('quizGame').append(tableElem)
-
 }
 
+//timer
 document.getElementById('start').addEventListener('click', () => {
-
     timeLeft = setInterval(() => {
         timer--
         document.getElementById('time').textContent = timer
-
         if (timer <= 0) {
             clearInterval(timeLeft)
             endGame()
